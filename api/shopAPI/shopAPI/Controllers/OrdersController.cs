@@ -2,23 +2,42 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Results;
+using System.Web.Mvc;
 
 namespace shopAPI.Controllers
 {
     public class OrdersController : ApiController
     {
         // GET: api/Orders
-        public IEnumerable<string> Get()
+        public JsonResult Get()
         {
-            return new string[] { "value1", "value2" };
+            var result = new JsonResult();
+
+            result.Data = new
+            {
+                customer = "User123",
+                product = "Intel i7",
+                price = "899.99"
+            };
+
+            return result;
         }
 
         // GET: api/Orders/5
-        public string Get(int id)
+        public JsonResult Get(int id)
         {
-            return "value";
+            var result = new JsonResult();
+
+            result.Data = new
+            {
+                customer = "User123",
+                product = "Intel i7",
+                price = "899.99"
+            };
+
+            return result;
         }
 
         // POST: api/Orders
