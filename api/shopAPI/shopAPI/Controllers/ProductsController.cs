@@ -6,24 +6,20 @@ using System.Net.Http;
 using System.Web.Helpers;
 using System.Web.Http;
 using System.Web.Mvc;
+using shopAPI.src;
 
 namespace shopAPI.Controllers
 {
     public class ProductsController : ApiController
     {
+        string[,] products = new string[5, 2];
+        ArrayManager filler = new ArrayManager();
+
         // GET: api/Products
-        public JsonResult Get()
+        public string[,] Get()
         {
-            //test hardcoded data, should be an ShopDataAccess entity
-            var result = new JsonResult();
-
-            result.Data = new
-            {
-                name = "product1",
-                price = "499"
-            };
-
-            return result;
+            products = filler.fillArray(products);
+            return products;
         }
 
         // GET: api/Products/5
@@ -37,9 +33,9 @@ namespace shopAPI.Controllers
             //    name = "product2",
             //    price = "599"
             //};
-            string[] result = new string[2];
-            result[0] = "product2";
-            result[1] = "599";
+
+            products = filler.fillArray(products);
+            string[] result = filler.sliceDimension(products, id);
             return result;
         }
   
