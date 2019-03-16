@@ -22,7 +22,6 @@
 - Implement Cross-Origin Resource Sharing to access API from website [*in progress*]<br/>
 - ~~Currency Java SOAP~~<br/>
 - make SOAP using external currency data online<br/>
-- API Models (if necessary)<br/>
 - ~~upgrade API controllers~~<br/>
 - ~~front page HTTP/CSS/PHP~~<br/>
 - frontend access to shop API [*in progress*]<br/>
