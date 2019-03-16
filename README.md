@@ -23,6 +23,6 @@
 - ~~Currency Java SOAP~~<br/>
 - make SOAP using external currency data online<br/>
 - ~~upgrade API controllers~~<br/>
-- ~~front page HTTP/CSS/PHP~~<br/>
-- frontend access to shop API [*in progress*]<br/>
+- ~~frontend access to shop API~~<br/>
+- change API result to JSON<br/>
 - frontend access to currency API</br>
