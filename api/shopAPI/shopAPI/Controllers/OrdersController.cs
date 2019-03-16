@@ -13,6 +13,7 @@ namespace shopAPI.Controllers
         // GET: api/Orders
         public JsonResult Get()
         {
+            //test hardcoded data, should be an ShopDataAccess entity
             var result = new JsonResult();
 
             result.Data = new
@@ -28,6 +29,7 @@ namespace shopAPI.Controllers
         // GET: api/Orders/5
         public JsonResult Get(int id)
         {
+            //test hardcoded data, should be an ShopDataAccess entity
             var result = new JsonResult();
 
             result.Data = new

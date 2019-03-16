@@ -14,6 +14,7 @@ namespace shopAPI.Controllers
         // GET: api/Products
         public JsonResult Get()
         {
+            //test hardcoded data, should be an ShopDataAccess entity
             var result = new JsonResult();
 
             result.Data = new
@@ -26,16 +27,19 @@ namespace shopAPI.Controllers
         }
 
         // GET: api/Products/5
-        public JsonResult Get(int id)
+        public string[] Get(int id)
         {
-            var result = new JsonResult();
+            //test hardcoded data, should be an ShopDataAccess entity
+            //var result = new JsonResult();
 
-            result.Data = new
-            {
-                name = "product2",
-                price = "599"
-            };
-
+            //result.Data = new
+            //{
+            //    name = "product2",
+            //    price = "599"
+            //};
+            string[] result = new string[2];
+            result[0] = "product2";
+            result[1] = "599";
             return result;
         }
   
