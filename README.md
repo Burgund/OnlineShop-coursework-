@@ -19,7 +19,7 @@
 
 # TODO:
 - Entity framework database provider compatibility error<br/>
-- Implement Cross-Origin Resource Sharing to access API from website [*in progress*]<br/>
+- ~~Implement Cross-Origin Resource Sharing to access API from website~~<br/>
 - ~~Currency Java SOAP~~<br/>
 - make SOAP using external currency data online<br/>
 - ~~upgrade API controllers~~<br/>
