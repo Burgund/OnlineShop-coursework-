@@ -18,32 +18,60 @@
     <h1>Products list from API</h1>
       <p id="name0"></p>
       <p id="price0"></p>
-      <button type="button">Add to cart</button>
+      <button type="button" onclick="javascript: addToCart(0)" >Add to cart</button>
       <br/>
       <br/>
       <p id="name1"></p>
       <p id="price1"></p>
-      <button type="button">Add to cart</button>
+      <button type="button" onclick="javascript: addToCart(1)">Add to cart</button>
       <br/>
       <br/>
       <p id="name2"></p>
       <p id="price2"></p>
-      <button type="button">Add to cart</button>
+      <button type="button" onclick="javascript: addToCart(2)">Add to cart</button>
       <br/>
       <br/>
       <p id="name3"></p>
       <p id="price3"></p>
-      <button type="button">Add to cart</button>
+      <button type="button" onclick="javascript: addToCart(3)">Add to cart</button>
       <br/>
       <br/>
       <p id="name4"></p>
       <p id="price4"></p>
-      <button type="button">Add to cart</button>
+      <button type="button" onclick="javascript: addToCart(4)">Add to cart</button>
       <br/>
       <br/>
-
+      <br/>
+      <br/>
+    <h2>My cart:</h2>
+      <table>
+      <tr>
+        <td id="th0"></td>
+      </tr>
+      <tr>
+        <td id="th1"></td>
+      </tr>
+      <tr>
+        <td id="th2"></td>
+      </tr>
+      <tr>
+        <td id="th3"></td>
+      </tr>
+      <tr>
+        <td id="th4"></td>
+      </tr>
+      </table>
 
     <script src="scripts.js"></script>
+    <script>
+    var i = 0;
+    function addToCart(z) {
+      if(i < 5){ document.getElementById('th' + i).textContent = document.getElementById('name' + z).textContent }
+      if(i > 4){ alert("Your cart is full!") }
+      i = i + 1
+    }
+    </script>
+
 
   </body>
 </html>
