@@ -43,8 +43,9 @@ namespace shopAPI.Controllers
         }
 
         // POST: api/Orders
-        public void Post([FromBody]string value)
+        public string Post(Models.OrderModel value)
         {
+            return "Done!";
         }
 
         // PUT: api/Orders/5
