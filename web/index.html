@@ -62,14 +62,27 @@
         <td id="th4"></td>
       </tr>
       </table>
+
+      <h4>
+        You will pay:
+        <p id="amount"></p>
+      </h4>
     <button type="button" onclick="javascript: sendOrder()">Buy</button>
 
     <script src="scripts.js"></script>
     <script>
     var i = 0;
     function addToCart(z) {
-      if(i < 5){ document.getElementById('th' + i).textContent = document.getElementById('name' + z).textContent }
-      if(i > 4){ alert("Your cart is full!") }
+      amount = document.getElementById('amount')
+      if(i < 5)
+      {
+        document.getElementById('th' + i).textContent = document.getElementById('name' + z).textContent
+        amount.textContent = Number(amount.textContent) + Number(document.getElementById('price' + z).textContent)
+      }
+      if(i > 4)
+      {
+        alert("Your cart is full!")
+      }
       i = i + 1
     }
     </script>
